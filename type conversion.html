@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1)implcit type conversion
+        document.write(2+'4')
+
+        document.write(2-'4')
+
+        document.write(2-'s')
+
+        document.write(12+true)
+
+        //2)explicit type conversion
+        var x='6'
+        document.write(x + ":" + typeof(x))
+        document.write("<br>")
+        var y=Number(x)
+        document.write(typeof(y))
+
+        var x='621java'
+        document.write(typeof( parseInt(x)))
+
+        var x='6.21java'
+        document.write(parseFloat(x))
+
+        var x=2
+        document.write(x + ":" + typeof(x))
+        document.write("<br>")
+        var y=String(x)
+        document.write(typeof(y))
+
+        var x=51
+        document.write(Boolean(x))
+        
+    </script>
+</body>
+</html>

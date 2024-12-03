@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*if statement
+        if else statement
+        if else if else statement
+        switch statement*/
+
+        var balance=10000;
+        var amount=+prompt("enter amount to transfer")
+
+        if(amount<balance){
+            alert("before deduction balance is :"+ balance)
+            balance-=amount
+            alert("deduction balance successfully")
+            alert("after deduction balance is :"+ balance)
+        }
+        else{
+            alert("your balance is :"+ balance + "enter amount less than your balance")
+        }
+
+        //if else-if else
+        var score=+prompt("enter your marks")
+        var grade
+
+        if(score>=90){
+            grade='A'
+        }
+        else if(score>=80){
+            grade='B'
+        }
+        else if(score>=70){
+            grade='C'
+        }
+        else if(score>=60){
+            grade='D'
+        }
+        else{
+            garde='F'
+        }
+        document.write(grade)
+
+        //switch case
+        // switch(expression){
+        //     case choice1:
+        //         statements
+        //         break
+        //     case choice2:
+        //         statements
+        //         break
+        //     default:
+        //         statements
+        //         break
+        // }
+    </script>
+</body>
+</html>
