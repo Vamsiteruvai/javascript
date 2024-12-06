@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*5 ways to implement objects
+        1)Object Literal
+        2)Using a new keyword with object constructor
+        3)Using a new keyword with a constructor function
+        4)Object.create() method
+        5)classes
+        */
+
+        //--->Object literal
+        // let movie={
+        //     name:'bahubali',
+        //     director:'rajamouli',
+        //     budget:'200crores'
+        // }
+        //accessing
+        // console.log(movie['name'])
+        // console.log(movie.name) 
+
+        //adding properties to the object or updating values 
+        // movie["name"]='RRR'
+        // movie.name='RRR'
+        // movie.song='bheem'
+        // console.log(movie)
+
+
+        //--->Using a new keyword with object constructor
+        // let movie=new Object()
+        // movie.name='Dark side'
+        // movie.release='12/02/2024'
+        // console.log(movie)
+
+        //--->Using a new keyword with a constructor function
+        // function user(name,age,login){
+        //     this.name=name
+        //     this.age=age
+        //     this.login=_=>{
+        //         console.log("hello",this.name,"successfully logedin")
+        //     }
+        // }
+        // let user1=new user('vamsi',22)
+        // user1.song='bheem'
+        // console.log(user1)
+        // user1.login()
+
+        //--->Object.create() method
+        /*this approch works when already an object existed in our program. based on that object a new object is created
+        using existed object.*/
+        // let movie={mname:'RRR',song:'bheem'}
+
+        // let movie2=Object.create(movie)
+        
+        // let movie1=Object.create(movie,{
+        //     name:{value:'vamsi'},
+        //     age:{value:21}
+        // })
+        // console.log(movie1)
+        // console.log(movie2)
+        
+    </script>
+</body>
+</html>
