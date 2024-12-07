@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- inline events
+        Name:<input id="b1" type="text"><br><br>
+        <button id="btn" onclick="document.body.style.backgroundColor='orange'">change color</button> -->
+
+        
+        Name:<input id="b1" type="text"><br><br>
+        <!-- <button id="btn" onclick="change()">change color</button> -->
+        <button id="btn">change color</button>
+    </div>
+    <script>
+        //-->inline events
+        // function change(){
+        //     document.body.style.backgroundColor='orange'
+        // }
+
+
+        //-->using event properties in javascript
+        // var btn=document.getElementById('btn')
+        // btn.onclick=change; //do not mention here paranthesis
+
+        // function change(){
+        //     console.log()
+        //     document.body.style.backgroundColor='red'
+        // }
+
+        // var btn=document.getElementById('btn')
+        // btn.onclick=function change(){
+        //     console.log()
+        //     document.body.style.backgroundColor='red'
+        // }
+
+
+        //-->using addEventListeners() method in js
+        // var btn=document.getElementById('btn')
+        // btn.addEventListener('click',change)
+
+        // function change(){
+        //     document.body.style.backgroundColor='green'
+        // }
+
+        // var btn=document.getElementById('btn')
+        // btn.addEventListener('click',function(){
+        //     document.body.style.backgroundColor='green'
+        // }) 
+
+        // var btn=document.getElementById('btn')
+        // btn.addEventListener('click',()=>{
+        //     document.body.style.backgroundColor='green'
+        // }) 
+
+        // var btn=document.getElementById('b1')
+        // btn.addEventListener('mouseover',function(){
+        //     btn.style.backgroundColor='green'
+        // })
+        // btn.addEventListener('mouseout',function(){
+        //     btn.style.backgroundColor='white'
+        // })
+
+        // var btn=document.getElementById('b1')
+        // btn.addEventListener('keyup',function(){
+        //     console.log(event)   //to check event details and its built-in properties use event object as an parameter function or we can simply print it
+        //     if(event.key=='a'){
+        //         alert("a is not allowed")
+        //     }
+        // })
+        
+    </script>
+</body>
+</html>
