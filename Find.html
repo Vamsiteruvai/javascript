@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var places=['hyderbad','nellore','guntur','prakasam','hightech city']
+        var place=places.find(function(ele){
+            return ele.startsWith('h')     //it will returns first occurance when the element is found
+        })
+        console.log(place)
+
+        //-----------some-------------------
+        var places=['hyderbad','nellore','guntur','prakasam','hightech city']
+        var place=places.some(function(ele){
+            return ele.startsWith('h')  //it will returns true when the first occurance element is found
+        })
+        console.log(place)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------------true case----------------
+        var marks=[45,122,61,78,89,253]
+        var res=marks.every(function(ele){
+            return ele>35
+        })
+        console.log(res)
+
+        //----------------false case-----------
+        var marks=[45,122,6,78,89,253]
+        var res=marks.every(function(ele){
+            return ele>35
+        })
+        console.log(res)
+    </script>
+</body>
+</html>
