@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <div id="para"></div>
+    <script>
+        var btn=document.getElementById('btn')
+        var para=document.getElementById('para')
+
+        btn.addEventListener('click',()=>{
+            var p=new Promise(
+                (success,reject)=>{
+                var ob=new XMLHttpRequest()
+                ob.open('GET','test.txt',true)
+                ob.send()
+                ob.onload=()=>{
+                    if(ob.status==200){
+                        success(ob.responseText)
+                    }
+                    else{
+                        reject('page not found')
+                    }
+                }
+                })
+                .then((data)=>{
+                    para.innerText=data
+                })
+                .catch((error)=>{
+                    para.innerText=error
+                })
+            })
+             
+            
+    </script>
+</body>
+</html>

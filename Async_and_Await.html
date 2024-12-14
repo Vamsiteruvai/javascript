@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async function first(){
+        //     var x= await 45
+        //     console.log("inside fun")
+        //     return x
+        // }  
+        // first()
+        // console.log("outside fun")
+
+
+        async function first(){
+            var x= await fetch('test.txt')
+            var data=await x.text()
+            console.log(data)
+        }
+        first()
+        // console.log("outside")
+    </script>
+</body>

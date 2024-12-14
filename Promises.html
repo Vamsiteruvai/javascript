@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p=new Promise(
+            function(success,rejection){
+                let datacame=false
+                if(datacame){
+                    success("promise resolved")
+                }
+                else{
+                    rejection("rejected")
+                }
+        })
+        .then(function(data){
+            console.log(data)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+        // console.log(p)
+    </script>
+</body>
+</html>
