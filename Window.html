@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="windowSlide()">open</button><br><br>
+    <button id="btn" onclick="Moveto()">move</button><br><br>
+    <button id="btn" onclick="Moveby()">moveBy</button><br><br>
+    <button id="btn" onclick="resizeto()">resizeTo</button><br><br>
+    <button id="btn" onclick="resizeby()">resizeBy</button><br><br>
+    <button id="btn" onclick="windowSlideClose()">close</button>
+    <script>
+        var b;
+        var btn=document.getElementById('btn')
+
+        function windowSlide(){
+            b=window.open("","_parent","width=400px,height=500px,left=100px,top=200px")
+        }
+        function windowSlideClose(){
+            b.close()
+        }
+        function Moveto(){
+           b.moveTo(400,200)
+        }
+        function Moveby(){
+            b.moveBy(200,100)
+        }
+        function resizeby(){
+            b.resizeBy(300,200)
+        }
+        function resizeto(){
+            b.resizeTo(800,400)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var salary=20000
+        function getSalary(a,b){
+            console.log(this.salary)
+            console.log(a,b)
+        }
+        var employee={
+            salary:30000
+        }
+        getSalary.apply(employee,[32,25])
+    </script>
+</body>
+</html>

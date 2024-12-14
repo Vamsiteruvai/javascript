@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function squre(num){
+            return num*num
+        }
+        function cube(num){
+            return num*num*num
+        }
+        function anyOperation(arr,operation){
+            let result=[]
+            for(ele of arr)result.push(operation(ele))
+            return result
+        }
+        var arr=[56,8,7,10,11]
+        let x=anyOperation(arr,cube)
+        console.log(x)
+
+
+        //------------------returning a function--------------------------
+        function first(){
+            return second
+        }
+        function second(){
+            console.log("this is second function")
+        }
+        first()()
+
+        //--------------------or------------------------------------
+        function first(a){
+            a()
+            return ()=>{console.log("this is Arrow function")}
+        }
+        function second(){
+            console.log("this is second function")
+        }
+        first(second)()
+    </script>
+</body>
+</html>

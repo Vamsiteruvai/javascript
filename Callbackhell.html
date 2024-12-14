@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function first(arg){
+        //     setTimeout(()=>{
+        //         console.log("line1")
+        //         arg()
+        //     },2000)
+        // }
+        // function second(){
+        //     console.log("line2")
+        // }
+        // first(second)
+
+
+        function first(arg){
+            setTimeout(()=>{
+                console.log("line1")
+                setTimeout(()=>{
+                    console.log("line2")
+                    setTimeout(()=>{
+                        console.log("line3")
+                        setTimeout(()=>{
+                            console.log("line4")
+                            setTimeout(()=>{
+                                console.log("line5")
+                            },1000)
+                        },1000)
+                    },2000)
+                },2000)
+            },2000)
+        }
+        
+        first()
+        
+
+    </script>
+</body>
+</html>

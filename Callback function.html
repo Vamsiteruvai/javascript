@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-------------first approch--------------------
+        // function test(a){
+        //     a()
+        // }
+        // test(function(){
+        //     console.log("call back function")
+        // })
+
+        //---------------second approch--------------------
+        function test(a){
+            a()
+            console.log("this is first function")
+        }
+        function test1(){
+            console.log("this is second function")
+        }
+        test(test1)
+    </script>
+</body>
+</html>

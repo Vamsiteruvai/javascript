@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ele"><br><br>
+    <button id="btn" >click</button><br><br><br>
+    <div id="apiInfo"></div>
+    <script>
+        var btn=document.getElementById('btn')
+        var apiInfo=document.getElementById('apiInfo')
+        var ele=document.getElementById('ele')
+
+        btn.addEventListener('click',()=>{
+            var ob=new XMLHttpRequest()
+            var str=`https://restcountries.com/v3.1/name/${ele.value}`
+            ob.open('GET',str,true)
+            ob.send()
+            ob.onload=()=>{
+                if(ob.status==200){
+                    var result=ob.responseText
+                    result=JSON.parse(result)
+                    let [country]=result
+                    console.log(country)
+                    //console.log(result)
+                    apiInfo.innerHTML=`<img src=${country.flags.png}>`
+                    //apiInfo.innerText=country.currencies.INR.symbol
+                }
+                else{
+                    apiInfo.innerText='page not fount'
+                }
+            }
+            ob.onprogress=()=>{
+                apiInfo.innerText='Loading......'
+            }
+        })
+    </script>
+</body>
+</html>

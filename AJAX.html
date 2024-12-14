@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="display()">click</button>
+    <p id="para"></p>
+    <script>
+        var btn=document.getElementById('btn')
+        var para=document.getElementById('para')
+
+        function display(){
+            var ob=new XMLHttpRequest()
+            ob.open('GET','test.txt',true)
+            ob.send()
+            ob.onprogress=function(){
+                para.innerText="Loading.........."
+            }
+            ob.onload=function(){
+                para.innerText=ob.responseText
+            }
+            
+        }
+    </script>
+</body>
+</html>

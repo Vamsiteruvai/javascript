@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn">click</button>
+    <button id="btn" onclick="this.style.color='red'">click</button> -->
+    <!-- <button id="btn" onclick="console.log(this)">click</button> -->
+    <script>
+        //outside of the function/object
+        // var x=10
+        // console.log(this)
+        // function add(){
+
+        // }
+        // console.log(window.x)
+        // console.log(x)
+        // console.log(this.x)
+
+        // var ob={
+        //     name:'xyz'
+        // }
+        // console.log(x)
+
+        //inside a regular expression
+        // var a=10
+        // function add(){
+        //     console.log(this.a)
+        // }
+        // add()
+        // console.log(this)
+
+        //inside a method
+        // var ob={
+        //     name:'xyz',
+        //     getFunction:function(){
+        //         console.log(this)
+        //         console.log("this is object function")
+        //     }
+        // }
+        // ob.getFunction()
+
+        //inside event handler
+        // var b=document.getElementById('btn')
+        // b.onclick=function(){
+        //     this.style.backgroundColor='green'
+        // }
+
+        //inside a use strict
+        'use strict'
+        //x=10
+        // var x=10
+        // console.log(this.x)
+        function add(){
+            console.log(this)
+        }
+        add()
+    </script>
+</body>
+</html>
