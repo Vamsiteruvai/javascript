@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function first(name){
+            this.name=name
+        }
+
+        var ob=new first('vamsi')
+        console.log(ob)
+        var ob1=new first('anil')
+        console.log(ob1)
+
+        first.prototype.id=102
+        ob.__proto__.year=2002
+        console.log(2024-ob1.year)
+
+    </script>
+</body>
+</html>
